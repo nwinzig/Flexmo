@@ -10,4 +10,4 @@ class Wallet(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
-    funds = db.Column(db.Float)
+    funds = db.Column(db.Float, default = 0)
