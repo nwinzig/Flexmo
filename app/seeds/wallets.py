@@ -2,7 +2,7 @@ from app.models import db, Wallet, environment, SCHEMA
 
 def seed_wallets():
     demo_wallet = Wallet(
-        user_id = 1, funds = 10
+        user = demo
     )
 
     db.session.add(demo_wallet)

@@ -15,7 +15,7 @@ class User(db.Model, UserMixin):
     hashed_password = db.Column(db.String(255), nullable=False)
     firstname = db.Column(db.String(30), nullable=False)
     lastname = db.Column(db.String(30), nullable=False)
-    wallet = db.relationship('Wallet', backref='users')
+    wallet = db.relationship('Wallet', backref='user', uselist=False)
 
     @property
     def password(self):
