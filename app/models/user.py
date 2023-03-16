@@ -15,7 +15,7 @@ class User(db.Model, UserMixin):
     hashed_password = db.Column(db.String(255), nullable=False)
     firstname = db.Column(db.String(30), nullable=False)
     lastname = db.Column(db.String(30), nullable=False)
-    wallet = db.relationship('Wallet', backref='user', uselist=False)
+    wallet = db.Column(db.Float, default = 0)
 
     @property
     def password(self):
@@ -32,5 +32,8 @@ class User(db.Model, UserMixin):
         return {
             'id': self.id,
             'username': self.username,
-            'email': self.email
+            'email': self.email,
+            'firstname': self.firstname,
+            'lastname': self.lastname,
+            'wallet':self.wallet
         }
