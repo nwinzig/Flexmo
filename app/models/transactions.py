@@ -15,9 +15,8 @@ class Transaction(db.Model):
     completed = db.Column(db.Boolean, nullable = False)
 
     #relationships for the sender nd recipient
-    sender = db.relationship('User', back_populates='Transaction')
-    recipient = db.relationship('User', back_populates='Transaction')
-
+    sender = db.relationship('User', back_populates='sender')
+    recipient = db.relationship('User', back_populates='recipient')
 
     def to_dict(self):
         return {
@@ -26,5 +25,5 @@ class Transaction(db.Model):
             'amount' : self.amount,
             'completed' : self.completed,
             'sender' : self.sender_id,
-            'recipient' = self.recipient_id
+            'recipient' : self.recipient_id
         }
