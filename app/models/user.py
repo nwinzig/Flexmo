@@ -17,6 +17,12 @@ class User(db.Model, UserMixin):
     lastname = db.Column(db.String(30), nullable=False)
     wallet = db.Column(db.Float, default = 0)
 
+    #relationships
+    sender = db.relationship('Transaction', back_populates='User')
+    recipient = db.relationship('Transaction', back_populates='User')
+
+
+
     @property
     def password(self):
         return self.hashed_password
