@@ -1,6 +1,7 @@
 from flask import Blueprint, jsonify
 from flask_login import login_required
 from app.models import User, db, Transaction
+from sqlalchemy import or_
 
 transaction_routes = Blueprint('transactions', __name__)
 
@@ -22,3 +23,13 @@ def get_one_transaction(id):
     transaction = Transaction.query.get(id)
 
     return {'transaction': transaction.to_dict()}
+
+
+@transaction_routes.route('/my/<int:id>')
+# @login_required
+def get_user_transactions(id):
+    """get all transactions associated with the user """
+
+    transactions = Transaction.query.filter(or_(Transaction.sender_id == id,Transaction.recipient_id == id)).all()
+
+    return {'transactions': [transaction.to_dict() for transaction in transactions]}
