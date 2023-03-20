@@ -8,15 +8,15 @@ class Transaction(db.Model):
         __table_args__ = {'schema': SCHEMA}
 
     id = db.Column(db.Integer, primary_key=True)
-    sender_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('users.id')))
-    recipient_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('users.id')))
-    payment_type = db.Column(db.String)
+    sender_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('users.id')), nullable=False)
+    recipient_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('users.id')), nullable=False)
+    payment_type = db.Column(db.String, nullable=False)
     amount = db.Column(db.Float, nullable = False)
     completed = db.Column(db.Boolean, nullable = False)
 
     #relationships for the sender nd recipient
-    sender = db.relationship('User', back_populates='sender')
-    recipient = db.relationship('User', back_populates='recipient')
+    sender = db.relationship('User', foreign_keys=[sender_id])
+    recipient = db.relationship('User', foreign_keys=[recipient_id])
 
     def to_dict(self):
         return {

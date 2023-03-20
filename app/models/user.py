@@ -18,8 +18,8 @@ class User(db.Model, UserMixin):
     wallet = db.Column(db.Float, default = 0)
 
     #relationships
-    sender = db.relationship('Transaction', back_populates='sender')
-    recipient = db.relationship('Transaction', back_populates='recipient')
+    # sender = db.relationship('Transaction', back_populates='sender')
+    # recipient = db.relationship('Transaction', back_populates='recipient')
 
 
 
