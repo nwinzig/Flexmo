@@ -12,3 +12,13 @@ def get_all_transactions():
     transactions = Transaction.query.all()
 
     return {'transactions': [transaction.to_dict() for transaction in transactions]}
+
+
+@transaction_routes.route('/<int:id>')
+# @login_required
+def get_one_transaction(id):
+    """get one transaction by transaction id """
+
+    transaction = Transaction.query.get(id)
+
+    return {'transaction': transaction.to_dict()}
