@@ -33,3 +33,10 @@ def get_user_transactions(id):
     transactions = Transaction.query.filter(or_(Transaction.sender_id == id,Transaction.recipient_id == id)).all()
 
     return {'transactions': [transaction.to_dict() for transaction in transactions]}
+
+
+# create a transaction
+
+
+
+# complete a currently pending transaction

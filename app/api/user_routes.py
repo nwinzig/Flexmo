@@ -25,3 +25,9 @@ def user(id):
 
     # user = User.query.get(id).join(User.wallet)
     return user.to_dict()
+
+# route to allow user to add funds to their wallet
+# @user_routes.route('/<int:id>/wallet/add', methods=['POST'])
+
+
+#route to allow user to remove funds from their wallet
