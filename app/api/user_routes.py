@@ -27,7 +27,11 @@ def user(id):
     return user.to_dict()
 
 # route to allow user to add funds to their wallet
-# @user_routes.route('/<int:id>/wallet/add', methods=['POST'])
-
+# @user_routes.route('/<int:id>/wallet/add', methods=['PUT'])
+    # find user
+    # use wallet form to recieve user info and new fund info
+    # adjust user current balance based on incoming data
+    # save database with new user funds
+    # return user
 
 #route to allow user to remove funds from their wallet

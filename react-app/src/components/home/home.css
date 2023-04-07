@@ -1,0 +1,7 @@
+.homePage{
+    width: 100%;
+    background-color: #E6F4FF;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+}
