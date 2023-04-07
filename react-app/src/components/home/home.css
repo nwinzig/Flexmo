@@ -11,3 +11,14 @@
 .homeRight{
     width: 100%;
 }
+.barcodeHolder{
+    height: 10rem;
+    display: flex;
+    flex-direction: row;
+}
+.barcodeHolder p{
+    width: 100%;
+}
+.barcodeHolder div{
+    width: 100%;
+}
