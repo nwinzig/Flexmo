@@ -5,10 +5,10 @@ function Home(){
 
     return (
         <div className='homePage'>
-            <div>
+            <div className='homeLeft'>
                 left
             </div>
-            <div>
+            <div className='homeRight'>
                 right
             </div>
         </div>

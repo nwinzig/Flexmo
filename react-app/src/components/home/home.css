@@ -1,7 +1,13 @@
 .homePage{
     width: 100%;
     background-color: #E6F4FF;
-    height: 100px;
+    height: 35rem;
     display: flex;
     flex-direction: row;
+}
+.homeLeft{
+    width: 100%;
+}
+.homeRight{
+    width: 100%;
 }
