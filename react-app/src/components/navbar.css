@@ -8,6 +8,7 @@
 .navHeader{
     width: 66%;
     font-size: 3rem;
+    color: #008CFF;
     display: flex;
     justify-content: center;
     align-items: center
