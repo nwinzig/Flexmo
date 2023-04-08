@@ -7,12 +7,15 @@ import './navbar.css'
 const NavBar = () => {
   return (
     <nav className='navWrapper'>
-      <div>
+      <div id='third'>
 
       </div>
       <h1 className='navHeader'>Flexmo</h1>
-      <div>
-        <ul>
+      <div className='sliderWrapper'>
+        <i
+        id='sliderIcon'
+        class="fa-solid fa-bars fa-2xl"></i>
+        {/* <ul>
           <li>
             <NavLink to='/' exact={true} activeClassName='active'>
               Home
@@ -36,7 +39,7 @@ const NavBar = () => {
           <li>
             <LogoutButton />
           </li>
-        </ul>
+        </ul> */}
       </div>
     </nav>
   );

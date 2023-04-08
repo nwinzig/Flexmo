@@ -6,7 +6,18 @@
     justify-content: space-between;
 }
 .navHeader{
+    width: 66%;
     font-size: 3rem;
     display: flex;
+    justify-content: center;
+    align-items: center
+}
+.sliderWrapper{
+    width: 33%;
+    display: flex;
+    justify-content: center;
     align-items: center;
+}
+#third{
+    width: 33%;
 }
