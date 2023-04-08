@@ -2,11 +2,15 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import LogoutButton from './auth/LogoutButton';
+import './navbar.css'
 
 const NavBar = () => {
   return (
-    <nav>
-      <div></div>
+    <nav className='navWrapper'>
+      <div>
+
+      </div>
+      <h1 className='navHeader'>Flexmo</h1>
       <div>
         <ul>
           <li>
