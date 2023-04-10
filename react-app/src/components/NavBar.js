@@ -9,6 +9,7 @@ const NavBar = () => {
   // slide button functions //
   function openSlide(){
     document.getElementById('slide').style.width = '225px'
+
   }
   function closeSlide(){
     document.getElementById('slide').style.width = '0px'
@@ -33,15 +34,17 @@ const NavBar = () => {
           >
             <i class="fa-regular fa-circle-xmark fa-2xl"></i>
           </button>
-          <NavLink to={'/'}>
-            Login
-          </NavLink>
-          <NavLink to={'/'}>
-            Sign up
-          </NavLink>
-          <NavLink to={'/'}>
-            About
-          </NavLink>
+          <div className='slideLinks'>
+            <NavLink to={'/'}>
+              Login
+            </NavLink>
+            <NavLink to={'/'}>
+              Sign up
+            </NavLink>
+            <NavLink to={'/'}>
+              About
+            </NavLink>
+          </div>
         </div>
         {/* <ul>
           <li>

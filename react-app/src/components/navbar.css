@@ -30,17 +30,26 @@
     cursor: pointer;
 }
 .slidePanel{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
     height: 200px;
     /* width: 0px; */
     position: fixed;
     z-index: 1;
-    top: 0;
-    right: 0;
+    top: 25px;
+    right: 25px;
     background-color: white;
     overflow-x: hidden;
     transition: .5s;
 }
-.slidePanel a{
+.slidePanel .slideLinks{
+    position: absolute;
+    right: 25px;
+    top: 25px;
+}
+.slidePanel .slideLinks a{
+
     font-size: 1.3rem;
     text-decoration: none;
     display: block;
@@ -61,7 +70,7 @@
 }
 .slidePanel .panelClose{
     position: absolute;
-    top: 0;
+    top: 25px;
     left:25px;
     margin-right: 25px;
 }
