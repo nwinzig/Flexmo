@@ -22,3 +22,13 @@
 #third{
     width: 33%;
 }
+.sliderButton{
+    border: none;
+    background-color: white;
+}
+.sliderButton:hover{
+    cursor: pointer;
+}
+.slidePanel{
+
+}

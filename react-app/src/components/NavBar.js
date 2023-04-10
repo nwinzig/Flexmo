@@ -12,9 +12,22 @@ const NavBar = () => {
       </div>
       <h1 className='navHeader'>Flexmo</h1>
       <div className='sliderWrapper'>
-        <i
-        id='sliderIcon'
-        class="fa-solid fa-bars fa-2xl"></i>
+        <button className='sliderButton'>
+          <i
+          id='sliderIcon'
+          class="fa-solid fa-bars fa-2xl"></i>
+        </button>
+        <div className='slidePanel'>
+          <NavLink to={'/'}>
+            Login
+          </NavLink>
+          <NavLink to={'/'}>
+            Sign up
+          </NavLink>
+          <NavLink to={'/'}>
+            About
+          </NavLink>
+        </div>
         {/* <ul>
           <li>
             <NavLink to='/' exact={true} activeClassName='active'>
