@@ -30,5 +30,38 @@
     cursor: pointer;
 }
 .slidePanel{
+    height: 200px;
+    /* width: 0px; */
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: .5s;
+}
+.slidePanel a{
+    font-size: 1.3rem;
+    text-decoration: none;
+    display: block;
+    color: #008CFF;
+    transition: .3s;
 
+}
+.slidePanel a:hover{
+    cursor: pointer;
+    color: black;
+}
+.panelClose{
+    border: none;
+    background-color: white;
+}
+.panelClose:hover{
+    cursor: pointer;
+}
+.slidePanel .panelClose{
+    position: absolute;
+    top: 0;
+    left:25px;
+    margin-right: 25px;
 }

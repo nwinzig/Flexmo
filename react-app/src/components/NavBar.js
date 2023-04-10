@@ -5,19 +5,34 @@ import LogoutButton from './auth/LogoutButton';
 import './navbar.css'
 
 const NavBar = () => {
+
+  // slide button functions //
+  function openSlide(){
+    document.getElementById('slide').style.width = '225px'
+  }
+  function closeSlide(){
+    document.getElementById('slide').style.width = '0px'
+  }
+
+
   return (
     <nav className='navWrapper'>
-      <div id='third'>
-
-      </div>
+      <div id='third'></div>
       <h1 className='navHeader'>Flexmo</h1>
-      <div className='sliderWrapper'>
-        <button className='sliderButton'>
+      <div className='sliderWrapper' >
+        <button className='sliderButton'
+        onClick={() => openSlide()}
+        >
           <i
           id='sliderIcon'
           class="fa-solid fa-bars fa-2xl"></i>
         </button>
-        <div className='slidePanel'>
+        <div className='slidePanel' id='slide'>
+          <button className='panelClose'
+          onClick={() => closeSlide()}
+          >
+            <i class="fa-regular fa-circle-xmark fa-2xl"></i>
+          </button>
           <NavLink to={'/'}>
             Login
           </NavLink>
